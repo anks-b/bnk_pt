@@ -34,7 +34,26 @@ mat-card.ts-card {
      .mat-card-title{
           margin: 0;
      }
+     .img32 {
+          height: 32px;
+          width:32px;
+        }
+     .transaction-log-header{
+          flex-grow: 1;
+          text-align: center;
+          margin: 0;
+     }
 }
 .opacity5{
      opacity:.5;
 }
+.app-transaction-dashboard {
+     display: flex;
+     justify-content: space-around;
+     .app-transaction {
+      flex-grow: 0.15;
+     }
+     .app-transaction-log {
+      flex-grow: .8;
+     }
+ }

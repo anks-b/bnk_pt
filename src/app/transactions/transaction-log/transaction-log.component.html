@@ -5,36 +5,24 @@
      </mat-card-header>
      <mat-card-content>
           <table mat-table [dataSource]="pastTransactions" class="mat-elevation-z8 ts-table">
-
-               <!--- Note that these columns can be defined in any order.
-                     The actual rendered columns are set as a property on the row definition"
-                     'Amount',
-                     'CategoryCode',
-                     'Merchant',
-                     'MerchantLogo',
-                     'TransactionDate',
-                     'TransactionType',
-                       Position Column -->
                <ng-container matColumnDef="TransactionDate">
                  <th mat-header-cell *matHeaderCellDef> TransactionDate </th>
                  <td mat-cell *matCellDef="let element" class="category-code" [ngStyle]="{'order-left-color': element.categoryCode}" style="border-left-color: {{element.categoryCode}};"> {{element.transactionDate | date: 'MMM MM'}} </td>
                </ng-container>
-             
-               <!-- Name Column -->
+                           
                <ng-container matColumnDef="MerchantLogo">
                  <th mat-header-cell *matHeaderCellDef>  </th>
                  <td mat-cell *matCellDef="let element"> <span><img class="icon-image" src="{{element.merchantLogo}}" alt=""></span>  </td>
                </ng-container>
-             
-               <!-- Weight Column -->
+                            
                <ng-container matColumnDef="Merchant">
                  <th mat-header-cell *matHeaderCellDef> Merchant </th>
                  <td mat-cell *matCellDef="let element"> 
                    <div>{{element.merchant}}</div>
-                   <div>{{element.transactionType}}</div> </td>
+                   <div>{{element.transactionType}}</div> 
+                 </td>
                </ng-container>
-             
-               <!-- Symbol Column -->
+                            
                <ng-container matColumnDef="Amount">
                  <th mat-header-cell *matHeaderCellDef> Amount </th>
                  <td mat-cell *matCellDef="let element"> {{element.amount | currency}} </td>
