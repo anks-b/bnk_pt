@@ -1,11 +1,19 @@
 mat-toolbar {
      widows: 100%;
-     display: block;
      padding:5px;
+     background: white;
+     display: flex;
 }
 .container {
      max-width: 80vw;
      min-height: 90vh;
      margin: 0 auto;
      padding-top: 20px;
+}
+.brand-logo {
+     height: 30px;
+}
+.brand-logo-container {
+     margin: 0 auto;
+    width: 80vw;
 }

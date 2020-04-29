@@ -1,9 +1,10 @@
-<mat-card>
-     <mat-card-header>      
-       <mat-card-title>Recent Transactions</mat-card-title>
+<mat-card class="ts-card ">
+     <mat-card-header class="ts-card-header"> 
+      <div mat-card-avatar> <img class="img32 opacity5" src="assets/icons/suitcase.png" /> </div>
+      <mat-card-title><h2 class="transaction-log-header" >Recent Transactions</h2></mat-card-title>     
      </mat-card-header>
      <mat-card-content>
-          <table mat-table [dataSource]="pastTransactions" class="mat-elevation-z8">
+          <table mat-table [dataSource]="pastTransactions" class="mat-elevation-z8 ts-table">
 
                <!--- Note that these columns can be defined in any order.
                      The actual rendered columns are set as a property on the row definition"

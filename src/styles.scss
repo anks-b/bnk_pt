@@ -7,3 +7,34 @@ html {
      background: url(./assets/background.jpg) no-repeat center center fixed; 
      background-size: cover;
 }
+.ts-card-header{
+     background-color: #0C8397;
+     margin: 0 -16px;
+     padding: 10px;
+     color:white;
+   }
+.p-0 {
+     padding:0
+   }
+.ts-table { 
+
+     thead{
+          display: none;
+     }
+}
+mat-card.ts-card {
+     padding-top:0;
+     mat-card-content {
+          padding-top: 20px;
+     }
+     .mat-card-header-text{
+          flex-grow: 1;
+          align-items: center;
+     }
+     .mat-card-title{
+          margin: 0;
+     }
+}
+.opacity5{
+     opacity:.5;
+}
