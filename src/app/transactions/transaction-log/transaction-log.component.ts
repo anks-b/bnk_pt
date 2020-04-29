@@ -1,12 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionsService } from '../../services/transactions.service'
+import { ITransactionLog } from '../../Models/ITransactionLog'
+
 @Component({
   selector: 'app-transaction-log',
   templateUrl: './transaction-log.component.html',
   styleUrls: ['./transaction-log.component.scss']
 })
 export class TransactionLogComponent implements OnInit {
-  pastTransaction: any[] = [];
+  pastTransactions: ITransactionLog[] = [];
+  displayedColumns: string[] = [    
+    'TransactionDate',    
+    'MerchantLogo',
+    'Merchant',
+    'Amount',
+  ];
+
+  
+  
 
   constructor( private transactionService: TransactionsService) { }
 
@@ -15,14 +26,11 @@ export class TransactionLogComponent implements OnInit {
   }
 
   getRecentTransactions(){
-    this.transactionService.getTransactions().subscribe(c => {
-      debugger;
+    this.transactionService.getTransactions().subscribe(res => {
+      if( res.data && res.data.length){
+      this.pastTransactions = res.data;
+      }
     })
-  }
-
-  getRandomColor() {
-    var color = Math.floor(0x1000000 * Math.random()).toString(16);
-    return '#' + ('000000' + color).slice(-6);
   }
 
 }

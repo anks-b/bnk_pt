@@ -10,6 +10,6 @@ export class TransactionsService {
   constructor(private http: HttpClient) { }
 
   getTransactions(): Observable<any>{
-    return this.http.get("assets/data.json")
+    return this.http.get("assets/transactions.json")
   }
 }

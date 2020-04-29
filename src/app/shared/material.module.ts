@@ -45,6 +45,7 @@ import {MatPaginatorModule} from '@angular/material/paginator'
         MatInputModule,
         MatTooltipModule,
         MatToolbarModule,
+        MatTableModule,
     ],
     exports: [
         MatButtonModule,
@@ -55,7 +56,8 @@ import {MatPaginatorModule} from '@angular/material/paginator'
         MatFormFieldModule,
         MatInputModule,
         MatTooltipModule,
-        MatToolbarModule
+        MatToolbarModule,
+        MatTableModule
     ]
 })
 export class MaterialModule { }

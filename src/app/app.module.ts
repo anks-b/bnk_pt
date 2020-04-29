@@ -7,6 +7,7 @@ import { TransactionDashboardComponent } from './transactions/transaction-dashbo
 import { TransactionLogComponent } from './transactions/transaction-log/transaction-log.component';
 import { TransactionComponent } from './transactions/transaction/transaction.component';
 import { MaterialModule } from './shared/material.module'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MaterialModule } from './shared/material.module'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
