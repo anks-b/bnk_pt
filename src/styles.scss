@@ -49,11 +49,24 @@ mat-card.ts-card {
 }
 .app-transaction-dashboard {
      display: flex;
-     justify-content: space-around;
+     justify-content: space-between;
      .app-transaction {
       flex-grow: 0.15;
      }
      .app-transaction-log {
       flex-grow: .8;
      }
+ }
+ .d-flex{
+      display: flex;
+ }
+ .justify-content-between {
+     justify-content: space-between;
+ }
+ .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+     line-height: 2 !important;
+     padding: 0 12px;
+ }
+ mat-button-toggle-group {
+      margin: 0 10px;
  }

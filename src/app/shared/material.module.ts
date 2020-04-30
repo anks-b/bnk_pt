@@ -4,7 +4,6 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-//Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
@@ -46,6 +45,11 @@ import {MatPaginatorModule} from '@angular/material/paginator'
         MatTooltipModule,
         MatToolbarModule,
         MatTableModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonToggleModule,
+        MatSortModule
+
     ],
     exports: [
         MatButtonModule,
@@ -57,7 +61,10 @@ import {MatPaginatorModule} from '@angular/material/paginator'
         MatInputModule,
         MatTooltipModule,
         MatToolbarModule,
-        MatTableModule
+        MatTableModule,
+        MatFormFieldModule,
+        MatButtonToggleModule,
+        MatSortModule
     ]
 })
 export class MaterialModule { }

@@ -4,6 +4,29 @@
       <mat-card-title><h2 class="transaction-log-header">Make a Transfer</h2></mat-card-title>     
      </mat-card-header>
      <mat-card-content>
+          <form class="transaction-form" name="transactionForm" [formGroup]="transactionForm" >
+               <mat-form-field class="example-full-width">
+                 <mat-label>From Account</mat-label>
+                 <input matInput formControlName="fromAccount" placeholder="From Account {{amount}}">
+               </mat-form-field>
+               <mat-form-field class="example-full-width">
+                    <mat-label>To Account</mat-label>
+                    <input matInput formControlName="toAccount" placeholder="To Account">
+                    <mat-error *ngIf="transactionForm.controls.toAccount?.invalid && (transactionForm.controls.toAccount.dirty || transactionForm.controls.toAccount.touched)">
+                      To Account <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Amount</mat-label>
+                    <input matInput formControlName="amount" placeholder="Amount">
+                    <mat-error *ngIf="transactionForm.controls.amount?.invalid && (transactionForm.controls.amount.dirty || transactionForm.controls.amount.touched)">
+                      Amount is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <div class="form-actions">
+                    <button mat-flat-button color="warn" (click)="makeTransfer()">Submit</button>
+                  </div>
+             </form>
      </mat-card-content>
 </mat-card>
    

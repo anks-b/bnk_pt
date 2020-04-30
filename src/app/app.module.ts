@@ -8,6 +8,7 @@ import { TransactionLogComponent } from './transactions/transaction-log/transact
 import { TransactionComponent } from './transactions/transaction/transaction.component';
 import { MaterialModule } from './shared/material.module'
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

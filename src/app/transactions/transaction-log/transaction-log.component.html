@@ -4,7 +4,21 @@
       <mat-card-title><h2 class="transaction-log-header" >Recent Transactions</h2></mat-card-title>     
      </mat-card-header>
      <mat-card-content>
-          <table mat-table [dataSource]="pastTransactions" class="mat-elevation-z8 ts-table">
+       <div class="d-flex justify-content-between">
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+      </mat-form-field>
+      <div>
+        <mat-label>Sort by</mat-label>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" (change)="applySort($event.value)">
+          <mat-button-toggle value="transactionDate">Date</mat-button-toggle>
+          <mat-button-toggle value="merchant">Benificiary</mat-button-toggle>
+          <mat-button-toggle value="amount">Amount</mat-button-toggle>
+        </mat-button-toggle-group> 
+      </div>
+       </div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ts-table">
                <ng-container matColumnDef="TransactionDate">
                  <th mat-header-cell *matHeaderCellDef> TransactionDate </th>
                  <td mat-cell *matCellDef="let element" class="category-code" [ngStyle]="{'order-left-color': element.categoryCode}" style="border-left-color: {{element.categoryCode}};"> {{element.transactionDate | date: 'MMM MM'}} </td>
